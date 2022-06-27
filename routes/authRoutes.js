@@ -7,7 +7,9 @@ module.exports = (app) => {
       scope: ['profile', 'email']
     })
   );
-
+app.get('/',(req,res)=>{
+  res.send("Hello World !")
+})
   app.get('/api/logout',(req,res)=>{
     req.logout();
     res.send(req.user);
